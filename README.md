@@ -16,3 +16,26 @@ A specialized security tool designed for **Active Defense and Deception** in tel
 2. Run the honeypot:
    ```bash
    python3 tarpit.py
+Test the connection (as an attacker):
+
+Bash
+nc localhost 2222
+Using Docker
+Bash
+docker build -t 5g-honeypot .
+docker run -p 2222:2222 5g-honeypot
+🧠 Technical Concepts Applied
+Socket Programming: Utilizing Python's socket API for low-level TCP communication.
+
+Exception Handling: Robust management of connection drops and network errors.
+
+Resource Management: Safe handling of client connections and session timeouts.
+
+DevSecOps: Integrating security logic directly into the infrastructure layer.
+
+📂 Project Structure
+tarpit.py: The core logic for the honeypot and tarpit loop.
+
+Dockerfile: Container configuration for isolated deployment.
+
+README.md: Project documentation.
